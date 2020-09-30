@@ -20,6 +20,7 @@ import { IEvent, ISession } from "../shared/index";
 export class EventDetailsComponent {
     event: IEvent
     addMode: boolean
+    filterBy: string = 'all'
 
     constructor(private eventService: EventService, private route: ActivatedRoute) {
 
