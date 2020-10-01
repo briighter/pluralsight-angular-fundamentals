@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { AuthService } from "./auth.service";
 import { Router } from "@angular/router";
-import { TOASTER_TOKEN, Toastr } from "../common/toastr.service";
+import { TOASTR_TOKEN, Toastr } from "../common/toastr.service";
 
 @Component({
   templateUrl: './profile.component.html',
@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
   private firstName:FormControl
   private lastName:FormControl
 
-  constructor(private router: Router, private authService: AuthService, @Inject(TOASTER_TOKEN) private toastr:Toastr) {
+  constructor(private router: Router, private authService: AuthService, @Inject(TOASTR_TOKEN) private toastr:Toastr) {
 
   }
 

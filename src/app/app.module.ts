@@ -16,11 +16,12 @@ import {
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { 
-  TOASTER_TOKEN, 
+  TOASTR_TOKEN, 
   Toastr,
   JQ_TOKEN, 
   CollapsibleWellComponent,
-  SimpleModalComponent 
+  SimpleModalComponent,
+  ModalTriggerDirective 
 } from "./common/index";
 import { appRoutes } from "./routes";
 import { RouterModule } from '@angular/router';
@@ -28,7 +29,7 @@ import { Error404Component } from "./errors/404.component";
 import { AuthService } from "./user/auth.service";
 
 let toastr:Toastr = window['toastr']
-let jQuery = ['$']
+let jQuery = window['$']
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ let jQuery = ['$']
     Error404Component,
     CollapsibleWellComponent,
     DurationPipe,
-    SimpleModalComponent
+    SimpleModalComponent,
+    ModalTriggerDirective
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,7 @@ let jQuery = ['$']
   providers: [
     AuthService,
     EventService,
-    { provide: TOASTER_TOKEN, useValue: toastr},
+    { provide: TOASTR_TOKEN, useValue: toastr},
     { provide: JQ_TOKEN, useValue: jQuery},
     EventRouteActivator,
     EventListResolver,
