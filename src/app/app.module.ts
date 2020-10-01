@@ -11,6 +11,7 @@ import {
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
+  UpvoteComponent,
   DurationPipe
 } from "./events/index";
 import { EventsAppComponent } from './events-app.component';
@@ -40,6 +41,7 @@ let jQuery = window['$']
     CreateEventComponent,
     CreateSessionComponent,
     SessionListComponent,
+    UpvoteComponent,
     NavBarComponent,
     Error404Component,
     CollapsibleWellComponent,
